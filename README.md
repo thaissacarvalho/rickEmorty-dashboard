@@ -66,8 +66,8 @@ O projeto foi estruturado com as seguintes rotas e funcionalidades:
 
 1. **Clone o repositório**
    ```bash
-   git clone <link-do-repositorio>
-   cd <nome-do-projeto>
+   git clone https://github.com/thaissacarvalho/rickEmorty-dashboard.git
+   cd rickEmorty-dashboard
 
 2. **Instale as dependências**: Certifique-se de ter o [Node.js](https://nodejs.org/) e o [Angular CLI](https://angular.io/cli) instalados em sua máquina. Depois, instale as dependências do projeto:
 
@@ -131,11 +131,11 @@ O projeto foi estruturado com as seguintes rotas e funcionalidades:
 2. **Clone o Repositório para sua Máquina Local**
    - Clone o repositório utilizando o comando:
      ```bash
-     git clone <URL-do-repositório>
+     git clone https://github.com/thaissacarvalho/rickEmorty-dashboard.git
      ```
    - Acesse o diretório do projeto:
      ```bash
-     cd <nome-do-projeto>
+     cd rickEmorty-dashboard
      ```
 
 3. **Crie uma Nova Branch**
