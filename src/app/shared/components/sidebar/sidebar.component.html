@@ -1,0 +1,16 @@
+<nav class="sidebar">
+  <div class="user-info">
+    <p>Olá, <span>{{ userName }}</span></p>
+  </div>
+
+  <ul>
+    <li><a routerLink="/dashboard" routerLinkActive="active">Inicio</a></li>
+    <li><a routerLink="/characters" routerLinkActive="active">Personagens</a></li>
+    <li><a routerLink="/episodes" routerLinkActive="active">Episodios</a></li>
+    <li><a routerLink="/profile" routerLinkActive="active">Perfil</a></li>
+  </ul>
+
+  <div class="container-logout">
+    <button (click)="onLogout()" class="button-logout">Sair</button>
+  </div>
+</nav>

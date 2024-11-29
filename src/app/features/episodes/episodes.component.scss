@@ -1,0 +1,51 @@
+.episode-list {
+  @apply p-4 sm:p-8 relative top-20;
+
+  h2 {
+    @apply mb-4 sm:mb-6 text-xl sm:text-2xl font-bold text-gray-800;
+  }
+
+  input {
+    @apply p-2 w-full mb-4 sm:mb-6 border border-gray-300 rounded text-base;
+  }
+
+  .loading {
+    @apply text-lg text-gray-500 text-center;
+  }
+
+  ul {
+    @apply list-none pl-0;
+  }
+
+  li {
+    @apply p-4 mb-4 bg-gray-100 rounded shadow;
+
+    &:hover {
+      @apply bg-gray-300;
+    }
+
+    a {
+      @apply no-underline text-gray-800 text-lg font-semibold;
+    }
+
+    a:hover {
+      @apply text-blue-500;
+    }
+  }
+
+  .pagination {
+    @apply flex justify-between mt-6 sm:mt-8;
+
+    button {
+      @apply py-2 px-4 bg-blue-500 text-white rounded text-base cursor-pointer transition duration-300 ease-in-out;
+
+      &:hover {
+        @apply bg-blue-700;
+      }
+
+      &:disabled {
+        @apply bg-gray-300 cursor-not-allowed;
+      }
+    }
+  }
+}

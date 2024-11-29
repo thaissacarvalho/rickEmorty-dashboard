@@ -1,0 +1,51 @@
+.episode-details {
+  @apply p-6 bg-[#f7f7f7] rounded-lg shadow-md mx-auto max-w-full relative top-24;
+
+  h2 {
+    @apply text-3xl font-semibold text-[#00b3b8] mb-4;
+  }
+
+  .episode-info {
+    @apply flex flex-col gap-4;
+
+    p {
+      @apply text-base text-[#3f3f3f];
+    }
+
+    .characters-list {
+      @apply flex flex-wrap gap-2 mt-2;
+
+      a {
+        @apply text-[#6c5ce7] hover:underline font-medium text-sm;
+      }
+    }
+
+    .loading {
+      @apply text-xl text-[#ff6347] text-center;
+    }
+  }
+
+  @screen sm {
+    @apply p-8;
+  }
+
+  @screen md {
+    @apply p-10 max-w-4xl;
+  }
+
+  @screen lg {
+    @apply p-12 max-w-7xl;
+
+    h2 {
+      @apply text-2xl;
+    }
+
+    .episode-info {
+      @apply flex-col gap-4;
+    }
+
+    .characters-list {
+      @apply flex-wrap gap-4;
+    }
+  }
+}

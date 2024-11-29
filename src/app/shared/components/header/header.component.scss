@@ -1,0 +1,31 @@
+.header {
+  @apply flex justify-between items-center p-4 bg-dark_blue_rick fixed top-0 left-0 right-0 z-[1000] w-full box-border;
+
+  &__img {
+    @apply w-[48px] h-[36px];
+
+    @media (min-width: 768px) {
+      @apply w-[68px] h-[52px];
+    }
+  }
+
+  &__search {
+    input {
+      @apply w-full p-2 border-none rounded-md bg-light_gray text-blue_morty focus:outline-none;
+
+      @media (min-width: 768px) {
+        @apply w-[400px];
+      }
+    }
+  }
+
+  &__user {
+    a {
+      @apply px-4 py-2 rounded-md bg-gradient-to-r from-blue_morty to-dark_blue_rick text-white font-semibold shadow-lg transition-transform transform;
+
+      &:hover {
+        @apply from-blue-600 to-blue-800 scale-105 shadow-xl;
+      }
+    }
+  }
+}

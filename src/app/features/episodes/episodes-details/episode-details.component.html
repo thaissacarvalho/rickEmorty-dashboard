@@ -1,0 +1,23 @@
+<div *ngIf="!loading && episode" class="episode-details">
+  <h2>{{ episode.name }}</h2>
+  <div class="episode-info">
+    <p><strong>Data de lançamento:</strong> {{ episode.air_date }}</p>
+    <p><strong>Temp.:</strong> {{ episode.episode }}</p>
+
+    <div *ngIf="characters && characters.length > 0">
+      <strong>Personagens:</strong>
+      <div class="characters-list">
+        <span *ngFor="let character of characters; let last = last">
+          <a
+            [routerLink]="['/characters', character.id]"
+            class="text-blue-500 hover:underline">
+            {{ character.name }}<span *ngIf="!last">,</span>
+          </a>
+        </span>
+      </div>
+    </div>
+    <div *ngIf="characters && characters.length === 0">
+      <p>Nenhum personagem encontrado para este episódio.</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="dashboard-container">
+  <h2>Dashboard</h2>
+
+  <div *ngIf="loading" class="loading">Carregando...</div>
+
+  <div class="sections">
+    <div class="section-item">
+      <h3>Personagens</h3>
+      <ul>
+        <li *ngFor="let character of characters">
+          <a [routerLink]="['/characters', character.id]">{{ character.name }}</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section-item">
+      <h3>Episódios</h3>
+      <ul>
+        <li *ngFor="let episode of episodes">
+          <a [routerLink]="['/episodes', episode.id]">{{ episode.name }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

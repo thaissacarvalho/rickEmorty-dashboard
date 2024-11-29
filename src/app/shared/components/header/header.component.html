@@ -1,0 +1,15 @@
+<header class="header">
+  <img src="https://www.freeiconspng.com/download/43819" alt="" class="header__img">
+  <div class="header__search">
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      (ngModelChange)="onSearchChange()"
+      placeholder="Pesquisar Personagens ou Episódios"
+    />
+  </div>
+
+  <div class="header__user">
+    <a routerLink="/login" routerLinkActive="active">Login</a>
+  </div>
+</header>

@@ -1,0 +1,43 @@
+.dashboard-container {
+  @apply flex flex-col p-32 overflow-auto h-full;
+
+  h2 {
+    @apply text-3xl font-bold text-gray-900 text-center sm:text-left;
+  }
+
+  .loading {
+    @apply text-2xl text-green-500 text-center;
+  }
+}
+
+.sections {
+  @apply flex flex-col  gap-4 mt-8;
+
+  .section-item {
+    @apply w-full bg-white p-4 shadow rounded-lg;
+
+    h3 {
+      @apply text-purple_portal font-bold;
+    }
+
+    ul {
+      @apply list-none pl-0;
+    }
+
+    li {
+      @apply my-2 text-dark_blue_rick;
+
+      &:hover {
+        @apply underline text-bright_yellow;
+      }
+    }
+
+    @screen md {
+      @apply w-[45%];
+    }
+  }
+
+  @screen md {
+    @apply flex-row justify-between;
+  }
+}

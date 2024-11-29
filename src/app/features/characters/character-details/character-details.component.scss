@@ -1,0 +1,61 @@
+.character-details {
+  @apply p-6 h-72 relative top-44 bg-gray-100 rounded-lg shadow-md max-w-screen-xl mx-auto;
+
+  h2 {
+    @apply text-3xl font-bold text-gray-800 mb-2;
+  }
+
+  .character-info {
+    @apply flex flex-col sm:flex-row items-center gap-8;
+
+    .character-image {
+      @apply w-40 rounded-lg object-cover shadow-lg;
+    }
+
+    .character-description {
+      @apply max-w-lg text-gray-600;
+
+      p {
+        @apply text-base sm:text-lg my-2;
+      }
+
+      .status {
+        @apply text-lg font-bold mt-4;
+
+        &.died {
+          @apply text-red-500;
+        }
+
+        &.alive {
+          @apply text-green-500;
+        }
+
+        &.unknown {
+          @apply text-blue-500;
+        }
+      }
+    }
+  }
+
+  .loading {
+    @apply text-xl text-center text-gray-500;
+  }
+}
+
+@media (min-width: 640px) {
+  .character-details {
+    @apply p-8;
+  }
+
+  h2 {
+    @apply text-4xl;
+  }
+
+  .character-image {
+    @apply w-52;
+  }
+
+  .character-description p {
+    @apply text-lg;
+  }
+}

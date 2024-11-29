@@ -1,0 +1,16 @@
+<div *ngIf="loading" class="loading">Carregando...</div>
+<div *ngIf="!loading && character" class="character-details">
+  <h2>{{ character.name }}</h2>
+  <div class="character-info">
+    <div class="character-image">
+      <img [src]="character.image" alt="{{ character.name }}">
+    </div>
+    <div class="character-description">
+      <p><strong>Status: </strong><span class="status" [ngClass]="getStatusClass(character.status)">{{ character.status }}</span></p>
+      <p><strong>Espécie:</strong> {{ character.species }}</p>
+      <p><strong>Genero:</strong> {{ character.gender }}</p>
+      <p><strong>Origem:</strong> {{ character.origin.name }}</p>
+      <p><strong>Localização:</strong> {{ character.location.name }}</p>
+    </div>
+  </div>
+</div>

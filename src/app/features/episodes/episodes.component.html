@@ -1,0 +1,22 @@
+<div class="episode-list">
+  <h2>Episódios</h2>
+
+  <input
+    type="text"
+    placeholder="Buscar episódio..."
+    [(ngModel)]="searchTerm"
+    (input)="onSearchTermChange(searchTerm)"
+  />
+
+  <div *ngIf="loading">Carregando...</div>
+
+  <ul *ngIf="!loading">
+    <li *ngFor="let episode of episodes">
+      <a [routerLink]="['/episodes', episode.id]">{{ episode.name }}</a>
+    </li>
+  </ul>
+
+  <div *ngIf="isLastPage" class="text-center">
+    <p>Não há mais episódios.</p>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+.sidebar {
+  @apply bg-dark_blue_rick text-white h-screen pt-6 fixed top-[72px] left-0 w-40 flex flex-col justify-start z-10;
+
+  @screen lg {
+    @apply w-52;
+  }
+}
+
+.user-info {
+  @apply p-2 text-sm;
+
+  @screen md {
+    @apply text-base;
+  }
+
+  @screen lg {
+    @apply text-xl;
+  }
+
+  p {
+    span {
+      @apply text-blue_morty underline hover:text-rick_skin hover:font-bold;
+    }
+  }
+}
+
+ul {
+  @apply list-none mt-8 flex flex-col;
+
+  li {
+    @apply p-2 text-left;
+
+    a {
+      @apply no-underline text-white hover:text-purple_portal hover:font-bold;
+
+      &.active {
+        @apply font-bold;
+      }
+    }
+  }
+}
+
+.container-logout {
+  @apply flex justify-end p-4;
+
+  .button-logout {
+    @apply mt-48 bg-purple-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition-all duration-300 ease-in-out;
+
+    &:hover {
+      @apply bg-purple-700 shadow-lg;
+    }
+
+    &:focus {
+      @apply outline-none ring-2 ring-purple-400;
+    }
+  }
+}
