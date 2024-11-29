@@ -1,25 +1,25 @@
 .container {
-  @apply flex flex-col h-screen; // Configura o container principal com altura da tela toda e layout em coluna
+  @apply flex flex-col h-screen;
 }
 
 .header {
-  @apply flex-none; // O header ocupa apenas o espaço necessário
+  @apply flex-none;
 }
 
 .main-content {
-  @apply flex flex-1; // Configura o conteúdo principal para ocupar o espaço restante da tela
+  @apply flex flex-1;
 }
 
 .sidebar {
-  @apply flex-none w-40 bg-dark_blue_rick text-white h-full fixed top-[72px] left-0 z-10; // Sidebar fixa ao lado esquerdo, ajustada em altura e largura para design mobile
+  @apply flex-none w-40 bg-dark_blue_rick text-white h-full fixed top-[72px] left-0 z-10;
   @screen lg {
-    @apply w-52; // Ajusta a largura em telas maiores
+    @apply w-52;
   }
 }
 
 .content {
-  @apply flex-1 ml-40 overflow-auto; // O conteúdo ajusta-se ao restante da tela e permite rolagem quando necessário
+  @apply flex-1 ml-40 overflow-auto;
   @screen lg {
-    @apply ml-52; // Ajusta a margem à esquerda para coincidir com o tamanho da sidebar em telas grandes
+    @apply ml-52;
   }
 }
