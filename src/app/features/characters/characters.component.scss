@@ -19,10 +19,26 @@
 }
 
 .character-cards {
-  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6;
+  @apply grid grid-cols-1 gap-6 mt-6;
+
+  @screen sm {
+    @apply grid-cols-2;
+  }
+
+  @screen md {
+    @apply grid-cols-3;
+  }
+
+  @screen sm {
+    @apply grid-cols-4;
+  }
 
   .card {
-    @apply border rounded-lg p-4 shadow-lg hover:shadow-xl transition-shadow duration-300;
+    @apply border rounded-lg p-4 shadow-lg transition-shadow duration-300;
+
+    &:hover {
+      @apply shadow-xl;
+    }
 
     img {
       @apply w-full h-40 object-cover rounded-t-lg;
@@ -37,7 +53,11 @@
     }
 
     a {
-      @apply block text-center text-blue-500 mt-4 hover:underline;
+      @apply block text-center text-blue-500 mt-4;
+
+      &:hover {
+        @apply underline;
+      }
     }
   }
 }

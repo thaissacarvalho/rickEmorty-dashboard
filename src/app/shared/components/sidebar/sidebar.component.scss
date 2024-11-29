@@ -19,7 +19,11 @@
 
   p {
     span {
-      @apply text-blue_morty underline hover:text-rick_skin hover:font-bold;
+      @apply text-blue_morty underline hover:text-rick_skin;
+
+      &:hover {
+        @apply font-bold;
+      }
     }
   }
 }

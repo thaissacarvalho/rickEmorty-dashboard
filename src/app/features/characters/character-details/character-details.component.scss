@@ -6,7 +6,11 @@
   }
 
   .character-info {
-    @apply flex flex-col sm:flex-row items-center gap-8;
+    @apply flex flex-col items-center gap-8;
+
+    @screen sm {
+      @apply flex-row;
+    }
 
     .character-image {
       @apply w-40 rounded-lg object-cover shadow-lg;
@@ -16,7 +20,11 @@
       @apply max-w-lg text-gray-600;
 
       p {
-        @apply text-base sm:text-lg my-2;
+        @apply text-base my-2;
+
+        @screen sm {
+          @apply text-lg;
+        }
       }
 
       .status {

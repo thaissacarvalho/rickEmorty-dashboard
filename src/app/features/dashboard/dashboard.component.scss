@@ -2,7 +2,11 @@
   @apply flex flex-col p-32 overflow-auto h-full;
 
   h2 {
-    @apply text-3xl font-bold text-gray-900 text-center sm:text-left;
+    @apply text-3xl font-bold text-gray-900 text-center;
+
+    @screen sm {
+      @apply text-left;
+    }
   }
 
   .loading {

@@ -1,12 +1,24 @@
 .profile-container {
   @apply flex flex-col items-center p-8 bg-gray-50 rounded-lg shadow-lg relative top-60;
 
+  @screen sm {
+    @apply p-10;
+  }
+
   h2 {
     @apply text-3xl font-bold text-gray-800;
+
+    @screen sm {
+      @apply text-4xl;
+    }
   }
 
   p {
     @apply text-xl text-gray-600 mt-2;
+
+    @screen sm {
+      @apply text-2xl;
+    }
   }
 
   button {
@@ -15,19 +27,5 @@
     &:hover {
       @apply bg-red-700;
     }
-  }
-}
-
-@media (min-width: 640px) {
-  .profile-container {
-    @apply p-10;
-  }
-
-  h2 {
-    @apply text-4xl;
-  }
-
-  p {
-    @apply text-2xl;
   }
 }

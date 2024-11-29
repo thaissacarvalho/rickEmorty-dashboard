@@ -1,12 +1,24 @@
 .episode-list {
-  @apply p-4 sm:p-8 relative top-20;
+  @apply p-4 relative top-20;
+
+  @screen sm {
+    @apply p-8;
+  }
 
   h2 {
-    @apply mb-4 sm:mb-6 text-xl sm:text-2xl font-bold text-gray-800;
+    @apply mb-4 text-xl font-bold text-gray-800;
+
+    @screen sm {
+      @apply mb-6 text-2xl;
+    }
   }
 
   input {
-    @apply p-2 w-full mb-4 sm:mb-6 border border-gray-300 rounded text-base;
+    @apply p-2 w-full mb-4 border border-gray-300 rounded text-base;
+
+    @screen sm {
+      @apply mb-6 text-2xl;
+    }
   }
 
   .loading {
@@ -35,6 +47,10 @@
 
   .pagination {
     @apply flex justify-between mt-6 sm:mt-8;
+
+    @screen sm {
+      @apply mt-8;
+    }
 
     button {
       @apply py-2 px-4 bg-blue-500 text-white rounded text-base cursor-pointer transition duration-300 ease-in-out;
