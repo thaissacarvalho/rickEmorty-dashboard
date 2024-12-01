@@ -52,6 +52,7 @@ O projeto foi estruturado com as seguintes rotas e funcionalidades:
 - **TypeScript**: Garantiu tipagem estática e segurança no código.
 - **SCSS**: Estilização modular e estruturada.
 - **Tailwind CSS**: Estilização utilitária para rápida prototipagem e consistência visual.
+- **Font Awesome**: Integrado para incorporar ícones visuais de alta qualidade, melhorando a usabilidade e a estética da interface.
 
 ### **APIs e Integrações**
 - **Rick and Morty API (REST)**: Fonte de dados para personagens e episódios.
