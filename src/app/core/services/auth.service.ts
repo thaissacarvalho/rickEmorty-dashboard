@@ -6,14 +6,14 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
+  private isAuthenticatedSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(!!localStorage.getItem('currentUser'));
+  isAuthenticated$ = this.isAuthenticatedSubject.asObservable();
 
-  private loggedIn: boolean = false;
   private currentUserSubject: BehaviorSubject<User | null> = new BehaviorSubject<User | null>(null);
 
   constructor() {
     const storedUser = localStorage.getItem('currentUser');
     if (storedUser) {
-      this.loggedIn = true;
       this.currentUserSubject.next(JSON.parse(storedUser));
     }
   }
@@ -40,9 +40,9 @@ export class AuthService {
     }
 
     if (user) {
-      this.loggedIn = true;
       localStorage.setItem('currentUser', JSON.stringify(user));
       this.currentUserSubject.next(user);
+      this.isAuthenticatedSubject.next(true);
       return true;
     }
 
@@ -50,13 +50,13 @@ export class AuthService {
   }
 
   logout(): void {
-    this.loggedIn = false;
     localStorage.removeItem('currentUser');
     this.currentUserSubject.next(null);
+    this.isAuthenticatedSubject.next(false);
   }
 
   isAuthenticated(): boolean {
-    return this.loggedIn;
+    return !!localStorage.getItem('currentUser');
   }
 
   getUser() {
