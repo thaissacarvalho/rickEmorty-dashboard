@@ -4,10 +4,30 @@
   </div>
 
   <ul>
-    <li><a routerLink="/dashboard" routerLinkActive="active">Inicio</a></li>
-    <li><a routerLink="/characters" routerLinkActive="active">Personagens</a></li>
-    <li><a routerLink="/episodes" routerLinkActive="active">Episodios</a></li>
-    <li><a routerLink="/profile" routerLinkActive="active">Perfil</a></li>
+    <li>
+      <a routerLink="/dashboard" routerLinkActive="active">
+        <i class="fa-solid fa-house lg:hidden"></i> <!-- Ícone de Home -->
+        <span class="hidden lg:inline">Inicio</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/characters" routerLinkActive="active">
+        <i class="fa-solid fa-user lg:hidden"></i> <!-- Ícone de Personagem -->
+        <span class="hidden lg:inline">Personagens</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/episodes" routerLinkActive="active">
+        <i class="fa-solid fa-video lg:hidden"></i> <!-- Ícone de Episódio -->
+        <span class="hidden lg:inline">Episodios</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/profile" routerLinkActive="active">
+        <i class="fa-solid fa-id-badge lg:hidden"></i> <!-- Ícone de Perfil -->
+        <span class="hidden lg:inline">Perfil</span>
+      </a>
+    </li>
   </ul>
 
   <div class="container-logout">

@@ -1,5 +1,5 @@
 .sidebar {
-  @apply bg-dark_blue_rick text-white h-screen pt-6 fixed top-[72px] left-0 w-40 flex flex-col justify-start z-10;
+  @apply bg-dark_blue_rick text-white h-screen pt-6 fixed top-[72px] left-0 w-28 flex flex-col justify-start z-10;
 
   @screen lg {
     @apply w-52;
@@ -32,10 +32,23 @@ ul {
   @apply list-none mt-8 flex flex-col;
 
   li {
-    @apply p-2 text-left;
+    @apply p-2 text-left flex items-center justify-center;
+
+    @screen lg {
+      @apply justify-start;
+    }
 
     a {
-      @apply no-underline text-white hover:text-purple_portal hover:font-bold;
+      @apply no-underline text-white hover:text-purple_portal hover:font-bold flex items-center justify-center w-full;
+
+      @screen lg {
+        @apply justify-start;
+      }
+
+
+      i {
+        @apply text-xl mr-2;
+      }
 
       &.active {
         @apply font-bold;
@@ -57,5 +70,28 @@ ul {
     &:focus {
       @apply outline-none ring-2 ring-purple-400;
     }
+  }
+}
+
+@screen lg {
+  .fa-house,
+  .fa-user,
+  .fa-video,
+  .fa-id-badge {
+    display: none;
+  }
+
+  .hidden.lg\\:inline {
+    display: inline;
+  }
+}
+
+@screen sm {
+  .hidden.lg\\:inline {
+    display: none;
+  }
+
+  .lg\\:hidden {
+    display: inline-block;
   }
 }

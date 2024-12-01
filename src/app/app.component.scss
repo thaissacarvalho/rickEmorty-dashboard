@@ -18,7 +18,7 @@
 }
 
 .content {
-  @apply flex-1 ml-40 overflow-auto;
+  @apply flex-1 ml-28 overflow-auto;
   @screen lg {
     @apply ml-52;
   }
