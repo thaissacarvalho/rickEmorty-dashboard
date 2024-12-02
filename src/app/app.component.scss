@@ -12,14 +12,32 @@
 
 .sidebar {
   @apply flex-none w-40 bg-dark_blue_rick text-white h-full fixed top-[72px] left-0 z-10;
+
   @screen lg {
     @apply w-52;
+  }
+
+  @media (min-width: 1920px) {
+    @apply w-60;
+  }
+
+  @media (min-width: 2560px) {
+    @apply w-72;
   }
 }
 
 .content {
   @apply flex-1 ml-28 overflow-auto;
+
   @screen lg {
     @apply ml-52;
+  }
+
+  @media (min-width: 1920px) {
+    @apply ml-60;
+  }
+
+  @media (min-width: 2560px) {
+    @apply ml-72;
   }
 }
