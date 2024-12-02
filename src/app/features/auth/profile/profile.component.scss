@@ -1,8 +1,13 @@
 .profile-container {
-  @apply flex flex-col items-center p-8 bg-gray-50 rounded-lg shadow-lg relative top-60;
+  @apply flex flex-col items-center bg-gray-50 rounded-lg shadow-lg;
 
-  @screen sm {
-    @apply p-10;
+  @media (min-width: 800px) {
+    @apply absolute;
+    top: calc(72px + 20px);
+    left: calc(10rem + 20px);
+    right: 20px;
+    bottom: 20px;
+    justify-content: center;
   }
 
   h2 {

@@ -19,7 +19,7 @@
 }
 
 .character-cards {
-  @apply grid grid-cols-1 gap-6 mt-6;
+  @apply grid grid-cols-1 gap-6 mt-6 justify-center items-center;
 
   @screen sm {
     @apply grid-cols-2;
@@ -29,8 +29,16 @@
     @apply grid-cols-3;
   }
 
-  @screen sm {
+  @screen lg {
     @apply grid-cols-4;
+  }
+
+  @screen xl {
+    @apply grid-cols-5;
+  }
+
+  @screen 2xl {
+    @apply grid-cols-6;
   }
 
   .card {
@@ -45,7 +53,15 @@
     }
 
     h3 {
-      @apply text-xl font-semibold text-center mt-4;
+      @apply text-sm font-semibold text-center mt-4;
+
+      @screen md {
+        @apply text-base;
+      }
+
+      @screen lg {
+        @apply text-xl;
+      }
     }
 
     p {

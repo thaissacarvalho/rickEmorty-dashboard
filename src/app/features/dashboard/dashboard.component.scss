@@ -15,10 +15,23 @@
 }
 
 .sections {
-  @apply flex flex-col  gap-4 mt-8;
+  @apply flex flex-col gap-4 mt-8;
+
+  @media (min-width: 800px) {
+    @apply absolute;
+    top: calc(150px + 20px);
+    left: calc(10rem + 20px);
+    right: 20px;
+    bottom: 20px;
+    justify-content: center;
+  }
+
+  @media (min-width: 1024px) {
+    @apply left-60;
+  }
 
   .section-item {
-    @apply w-full bg-white p-4 shadow rounded-lg;
+    @apply w-full bg-white p-4 shadow rounded-lg flex flex-col min-h-28;
 
     h3 {
       @apply text-purple_portal font-bold;
@@ -37,7 +50,7 @@
     }
 
     @screen md {
-      @apply w-[45%];
+      @apply w-[45%] min-h-[45rem];
     }
   }
 

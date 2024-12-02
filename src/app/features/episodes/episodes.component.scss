@@ -1,6 +1,11 @@
 .episode-list {
   @apply p-4 relative top-20;
 
+  @media (min-width: 650px) {
+    @apply mx-auto;
+    max-width: 100%;
+  }
+
   @screen sm {
     @apply p-8;
   }
@@ -63,5 +68,15 @@
         @apply bg-gray-300 cursor-not-allowed;
       }
     }
+  }
+}
+
+@media (min-width: 650px) {
+  .episode-list {
+    @apply p-8;
+  }
+
+  h2 {
+    @apply text-2xl;
   }
 }

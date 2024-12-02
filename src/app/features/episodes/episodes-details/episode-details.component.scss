@@ -1,5 +1,5 @@
 .episode-details {
-  @apply p-6 bg-[#f7f7f7] rounded-lg shadow-md mx-auto max-w-full relative top-24;
+  @apply p-6 bg-[#f7f7f7] rounded-lg shadow-md mx-auto max-w-full relative top-36;
 
   h2 {
     @apply text-3xl font-semibold text-[#00b3b8] mb-4;
@@ -30,11 +30,11 @@
   }
 
   @screen md {
-    @apply p-10 max-w-4xl;
+    @apply p-10 max-w-4xl top-40;
   }
 
   @screen lg {
-    @apply p-12 max-w-7xl;
+    @apply p-12 max-w-7xl top-56;
 
     h2 {
       @apply text-2xl;

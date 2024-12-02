@@ -1,5 +1,11 @@
 .character-details {
-  @apply p-6 h-72 relative top-44 bg-gray-100 rounded-lg shadow-md max-w-screen-xl mx-auto;
+  @apply p-6 bg-gray-100 rounded-lg shadow-md max-w-screen-xl mx-auto relative top-[152.25px];
+
+  @media (min-width: 650px) {
+    @apply mx-auto;
+    max-width: 90%;
+    padding: 2rem;
+  }
 
   h2 {
     @apply text-3xl font-bold text-gray-800 mb-2;
